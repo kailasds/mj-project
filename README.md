@@ -1,4 +1,4 @@
-# ClothingGAN: AI Powered Clothing Design Generator
+# AI-Clothing: AI Powered Clothing Design Generator
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kailasds/mj-project/blob/master/AI-Clothing.ipynb)
 
 
@@ -8,36 +8,24 @@
 
 
 ## Inspiration
-GAN or Generative Adversarial Network is a generative model that enables us to generate images by learning the probability distribution of a large image dataset. GAN enables us to generate high-quality arts or design even without the technical or artistic skill in drawing. Recently, many face editing demonstrations on GAN has been made, but never seen semantic manipulation in other datasets. Hence,  I created ClothingGAN an application where you can collaboratively design clothes without high technical expertise.
+GAN or Generative Adversarial Network is a generative model that enables us to generate images by learning the probability distribution of a large image dataset. GAN enables us to generate high-quality arts or design even without the technical or artistic skill in drawing. Recently, many face editing demonstrations on GAN has been made, but never seen semantic manipulation in other datasets. Hence,  we created AI-Clothing, an application where you can collaboratively design clothes without high technical expertise.
 
 ## What it does
-ClothingGAN able to generate clothing images and mix these images. While mixing, you can control which structure or style that you want the clothing to copy. Additionally, you can edit the generated clothing with several given attributes such as dark color, jacket, dress, or coat.
+AI-Clothing enables us to generate clothing images and mix these images. While mixing, you can control which structure or style that you want the clothing to copy. Additionally, you can edit the generated clothing with several given attributes such as dark color, jacket, dress, or coat.
 
-## How I built it
-I trained StyleGAN2-ADA on a subset of the Lookbook dataset. The total images I trained it on are 8,726 clothing images with a clean background. I transfer learned from FFHQ model and trained the model for a day.
+## How to build 
+We trained StyleGAN2-ADA on a subset of the Lookbook dataset. The total images we trained it on are 8,726 clothing images with a clean background.
 
-After finished training the GAN, I proceeded to use GANSpace method to find important directions in the latent space. Then, I tried to guess what these directions represent and labeled them accordingly. The reason I use GANSpace is that it is unsupervised and does not need an attribute classifier.
+After finishing training the GAN, We proceeded to use GANSpace method to find important directions in the latent space. Then, we tried to guess what these directions represent and labeled them accordingly. The reason we used GANSpace is that it is unsupervised and does not need an attribute classifier.
 
-Finally, I created a UI with Gradio UI library. All the development is done on Colab. Gradio made deployment very easy. I can directly deploy the UI from Colab where Gradio will create a proxy from the Colab server to their domain and the given URL, hence allowing the general public to use the UI or demo. However, since I cannot keep the Colab server on continuously due to GPU usage, ping me if you want to try out the demo.
-
-
-
-## Challenges I ran into
-One of the challenges I faced was fixing a memory leak issue. Part of the code keeps crashing, and I initially thought I cannot fit the model to the GPU memory, however, after hours of debugging, I finally found the code that has the memory leak.
-
-## What I learned
-I am already quite familiar with GAN but I have always been intimidated on deploying ML models. Luckily, I discovered Gradio UI, a library that makes ML deployment very easy. There were also other alternatives such as StreamLit or Dash, but found Gradio as the easiest to work with. One shortcoming is that it's quite inflexible in terms of customization.
-
-## What's next for ClothingGAN
-There is a lot of potential for the project. Some features that can be added are appearance transfer, image inversion (uploading & editing real image), generating the fashion model itself, conditional text input with OpenAI CLIP model, etc.
+Finally, we created a UI with Gradio UI library. All the development is done on Collab. Gradio made deployment very easy. We can directly deploy the UI from Collab where Gradio will create a proxy from the Collab server to their domain and the given URL.
 
 
-## Citation
-```
-@inproceedings{härkönen2020ganspace,
-  title     = {GANSpace: Discovering Interpretable GAN Controls},
-  author    = {Erik Härkönen and Aaron Hertzmann and Jaakko Lehtinen and Sylvain Paris},
-  booktitle = {Proc. NeurIPS},
-  year      = {2020}
-}
-```
+## Challenges 
+One of the challenges we faced was uploading the dataset to Google Drive. As the file size was large a direct access to the dataset was denied. Temporarily we uploaded the dataset to Mega to rectify the issues. Once solved we uploaded it back to the Google Drive.
+
+## Learning
+We discovered Gradio UI, a library that makes ML deployment very easy. There were also other alternatives such as StreamLit or Dash, but found Gradio as the easiest to work with. One shortcoming is that it's quite inflexible in terms of customization.
+
+## What's next 
+There is a lot of potential for the project. Some features that can be added are appearance transfer, image inversion (uploading & editing real image), generating the fashion model itself, etc.
