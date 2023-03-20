@@ -1,5 +1,5 @@
 # ClothingGAN: AI Powered Clothing Design Generator
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kailasds/mj-project/blob/master/ClothingGAN_Demo.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/kailasds/mj-project/blob/master/AI-Clothing.ipynb)
 
 
 
