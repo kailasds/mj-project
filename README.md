@@ -8,7 +8,7 @@
 
 
 ## Inspiration
-GAN or Generative Adversarial Network is a generative model that able to generate images by learning the probability distribution of a large image dataset. I always find GANs fascinating as it enables me to generate high-quality arts or design even without the technical or artistic skill in drawing. Recently, I've seen many face editing demonstrations on GAN, but never seen semantic manipulation in other datasets. Hence,  I created ClothingGAN an application where you can collaboratively design clothes without high technical expertise.
+GAN or Generative Adversarial Network is a generative model that enables us to generate images by learning the probability distribution of a large image dataset. GAN enables us to generate high-quality arts or design even without the technical or artistic skill in drawing. Recently, many face editing demonstrations on GAN has been made, but never seen semantic manipulation in other datasets. Hence,  I created ClothingGAN an application where you can collaboratively design clothes without high technical expertise.
 
 ## What it does
 ClothingGAN able to generate clothing images and mix these images. While mixing, you can control which structure or style that you want the clothing to copy. Additionally, you can edit the generated clothing with several given attributes such as dark color, jacket, dress, or coat.
